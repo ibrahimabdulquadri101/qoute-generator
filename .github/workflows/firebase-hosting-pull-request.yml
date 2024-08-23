@@ -19,3 +19,9 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_REACT_APP_EFBCF }}
           projectId: my-react-app-efbcf
+   - name: Deploy to Firebase Hosting
+      uses: w9jds/firebase-action@v2.4.0
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
