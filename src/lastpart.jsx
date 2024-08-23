@@ -5,8 +5,7 @@ const Lastpart = ({getQoute,quote,author}) => {
     const tweetUrl = `https://twitter.com/intent/tweet?text="${encodeURIComponent(quote)}" - ${encodeURIComponent(author)}`;
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(document.URL)}`;
     const iconStyle = {
-        color: "rgb(52, 34, 36)", // Applying the desired color
-        transition: "color 0.3s ease",
+        color: "#fffff", // Applying the desired color
     };
     return(
         <>
@@ -17,7 +16,7 @@ const Lastpart = ({getQoute,quote,author}) => {
                         target="_blank" 
                         rel="noopener noreferrer"
                         >
-                <button><FaTwitter className="twitter" style={iconStyle}/></button>
+                <FaTwitter className="twitter" style={iconStyle}/>
                 </a>
                 <a
                     className="facebook1" 
@@ -25,7 +24,7 @@ const Lastpart = ({getQoute,quote,author}) => {
                     target="_blank" 
                     rel="noopener noreferrer"
                 >
-                <button><PiFacebookLogoBold className="facebook" style={iconStyle}/></button>
+                <PiFacebookLogoBold className="facebook" style={iconStyle}/>
                 </a>
             </div>
             <div className="new-qoute">
